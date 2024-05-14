@@ -24,6 +24,7 @@ public class User {
     private Set<Role> roles;
 
     @OneToMany
+    @JoinColumn(name = "transaction_id")
     private Transaction transaction;
 
     public UUID getUserId() {
