@@ -2,6 +2,7 @@ package douglas.appCashManegement.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -17,15 +18,11 @@ public class User {
     private String password;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
-        name = "tb_users_roles",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "role_id")
+            name = "tb_users_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "id")
     )
     private Set<Role> roles;
-
-    @OneToMany
-    @JoinColumn(name = "transaction_id")
-    private Transaction transaction;
 
     public UUID getUserId() {
         return userId;
@@ -59,11 +56,4 @@ public class User {
         this.roles = roles;
     }
 
-    public Transaction getTransaction() {
-        return transaction;
-    }
-
-    public void setTransaction(Transaction transaction) {
-        this.transaction = transaction;
-    }
 }

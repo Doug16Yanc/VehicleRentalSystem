@@ -11,8 +11,8 @@
 	<groupId>douglas</groupId>
 	<artifactId>appCashManegement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>appCashManegement</name>
-	<description>Java API REST for app cash management</description>
+	<name>VehicleRentalSystem</name>
+	<description>Java API REST for vehicle rental system</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
