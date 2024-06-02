@@ -1,4 +1,4 @@
-package douglas.appCashManegement.entities;
+package douglas.VehicleRentalSystem.domain;
 
 import jakarta.persistence.*;
 

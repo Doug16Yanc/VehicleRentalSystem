@@ -1,7 +1,9 @@
-package douglas.appCashManegement.repository;
+package douglas.VehicleRentalSystem.repository;
 
-import douglas.appCashManegement.entities.Role;
+import douglas.VehicleRentalSystem.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
+
+    Role findByName(String name);
 }

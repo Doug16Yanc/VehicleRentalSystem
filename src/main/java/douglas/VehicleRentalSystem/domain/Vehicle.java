@@ -1,4 +1,4 @@
-package douglas.appCashManegement.entities;
+package douglas.VehicleRentalSystem.domain;
 
 import jakarta.persistence.*;
 
@@ -17,7 +17,7 @@ public class Vehicle {
     @Column(name = "color")
     private String color;
 
-    @Column(name = "color")
+    @Column(name = "year")
     private int year;
 
     @Column(name = "fuel_type")
@@ -45,8 +45,7 @@ public class Vehicle {
 
     }
 
-    public Vehicle(Long id, int plateNumber, String color, int year, String fuelType, int doorsNumber, Double mileage, Long renavam, String chassi, Double rentalValue, Brand brand) {
-        this.id = id;
+    public Vehicle(int plateNumber, String color, int year, String fuelType, int doorsNumber, Double mileage, Long renavam, String chassi, Double rentalValue, Brand brand) {
         this.plateNumber = plateNumber;
         this.color = color;
         this.year = year;
@@ -58,6 +57,7 @@ public class Vehicle {
         this.rentalValue = rentalValue;
         this.brand = brand;
     }
+
 
     public Long getId() {
         return id;
